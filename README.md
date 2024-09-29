@@ -115,11 +115,11 @@ Using `weight=0` and `bias=0` we get a slope value of $161$ and bias value of $2
 
 We can slightly adjust these values to generate a new weight.
 
-$New Weight = old weight + (change * weight slope)$
-$New Weight = 0 + (0.01 * 161)$
-$New Weight = 1.61$
-$New Bias = 0 + (0.01 * 26.4)$
-$New Bias = 0.264$
+$New Weight = old weight + (change * weight slope)$ <br />
+$New Weight = 0 + (0.01 * 161)$ <br />
+$New Weight = 1.61$ <br />
+$New Bias = 0 + (0.01 * 26.4)$ <br />
+$New Bias = 0.264$ <br />
 ## Gradient Descent
 
 Gradient Descent is a technique used to optimize our weight and bias values to get a minimal loss.
