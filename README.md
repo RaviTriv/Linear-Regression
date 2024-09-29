@@ -111,7 +111,7 @@ Our derivative of loss with respect to b is <br>
 ${1\over N} \sum\_{i=1}^N{2 * ( output - expected )}$ <br />
 
 
-
+Using `weight=0` and `bias=0` we get a slope value of $161$.
 
 $y=b_{0} + b_{1}X$<br /> 
 $y=2.1 + b_{1}X$<br /> 
