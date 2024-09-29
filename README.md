@@ -95,7 +95,9 @@ $Loss= 229$<br />
 
 Gradient Descent is a technique used to optimize our weight and bias values to get a minimal loss.
 
-We want to calculate the derivative of our loss function with respect to weight and bias. 
+To do this, we want the slope of our loss function at different points.
+
+We will calculate the derivative of our loss function with respect to weight and bias. 
 <br />
 $Loss = {(output - expected)^2 \over N }$ <br />
 <br />
