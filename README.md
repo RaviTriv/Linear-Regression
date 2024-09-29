@@ -80,24 +80,33 @@ A best fit line looks something like the following.
 
 In situations like these measuring `Loss` is critical. Loss can be defined as the difference between the expected and recieved value. The purposing of training models is to reduce our loss to a minimal amount.
 
-The formula looks something like
-$\frac{1}{N}\ \sum_{}\(expected - output)^2 $
+The formula we are using Mean Squared Error(MSE) looks something like
+$\frac{1}{N}\ \sum\_{}\(expected - output)^2 $
+
+$Loss = {(2 - 0)^2 + (5 - 0)^2 + (6 - 0)^2 + (9 - 0)^2 + (11 - 0)^2 + (14 - 0)^2 + (19- 0)^2 + (20 - 0)^2 + (21 - 0)^2 + (25 - 0)^2 \over 10}$
+$Loss=$
 
 $y=b_{0} + b_{1}X$
-
 $y=2.1 + b_{1}X$
 $y=2.1 + 2.5X$
 
-Our formula returns the following values when `x=5` we get `y=14.6`. Our expected value is `y=14`.
+| x   | recieved y | expected y |
+| --- | ---------- | ---------- |
+| 0   | 2.1        | 2          |
+| 1   | 4.6        | 5          |
+| 2   | 7.1        | 6          |
+| 3   | 9.6        | 9          |
+| 4   | 12.1       | 11         |
+| 5   | 14.6       | 14         |
+| 6   | 17.1       | 19         |
+| 7   | 19.6       | 20         |
+| 8   | 22.4       | 21         |
+| 9   | 24.6       | 25         |
 
-$L=(14.6 - 14)^2$
-$L=0.36$
+$\frac{1}{N}\ \sum\_{}\(expected - output)^2 $
 
-Plugging these numbers into our loss function we see our loss is $0.36$
+Plugging these numbers in we see our MSE is $0.36$
 
+## Gradient Descent
 
-## Gradient Descent 
 Gradient Descent is a technique used to optimize our weight and bias values to get a minimal loss.
-
-
-
