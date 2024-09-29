@@ -84,7 +84,11 @@ The formula we are using Mean Squared Error(MSE) looks something like
 $\frac{1}{N}\ \sum\_{}\(expected - output)^2 $
 
 $Loss = {(2 - 0)^2 + (5 - 0)^2 + (6 - 0)^2 + (9 - 0)^2 + (11 - 0)^2 + (14 - 0)^2 + (19- 0)^2 + (20 - 0)^2 + (21 - 0)^2 + (25 - 0)^2 \over 10}$<br /> 
-$Loss=$
+<br /> 
+$Loss= {(4 + 25 + 36 + 81 + 121 + 196 + 361 + 400 + 441 + 625)\over 10}$<br /> 
+<br /> 
+$Loss= {(4 + 25 + 36 + 81 + 121 + 196 + 361 + 400 + 441 + 625)\over 10}$<br /> 
+$Loss= 229$<br /> 
 
 $y=b_{0} + b_{1}X$<br /> 
 $y=2.1 + b_{1}X$<br /> 
