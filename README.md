@@ -92,16 +92,25 @@ $Loss= {(4 + 25 + 36 + 81 + 121 + 196 + 361 + 400 + 441 + 625)\over 10}$<br />
 $Loss= {(4 + 25 + 36 + 81 + 121 + 196 + 361 + 400 + 441 + 625)\over 10}$<br /> 
 $Loss= 229$<br /> 
 
-Now we want to calculate the derivative of our loss function with respect to weight. <br />
-$Loss = {(output - expected)^2 \over N }$
+Now we want to calculate the derivative of our loss function with respect to weight. 
 <br />
-$Loss = {(output)^2 - (expected)^2 - 2*output*expected \over N }$
+$Loss = {(output - expected)^2 \over N }$ <br />
 <br />
-$Loss = {(output^2 - expected^2 - 2*output*expected) \over N }$
+${((output)^2 + (expected)^2 - 2 * expected * output) \over N }$ <br />
 <br />
-$Loss = {((w * x + b)^2 - expected^2 - 2*(w * x + b)*expected) \over N }$
+${((w * x + b)^2 + (expected)^2 - 2 * expected * (w * x + b)) \over N }$ <br />
 <br />
-$Loss = {(w * x + b)^2\over N  + expected^2\over N + -2*(w * x + b)*expected\over N }$
+$((w * x + b)^2)\over N$ + $((expected)^2)\over N$ + $(-2 * expected * (w * x + b))\over N$ <br />
+<br />
+${(w)^2 * (x)^2 + (b)^2 + 2 * w * x * b\over N} + 0 +  {-2 * expected * x\over N}$ <br />
+<br />
+${2 * x * ( x * w + b - expected )\over N}$ <br />
+Therefore the derivative of loss with respect to w is <br>
+${2 * x * ( output - expected )\over N}$ <br />
+Our derivative of loss with respect to b is <br>
+${2 * ( output - expected )\over N}$ <br />
+
+
 
 
 $y=b_{0} + b_{1}X$<br /> 
