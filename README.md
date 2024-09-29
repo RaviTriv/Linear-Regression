@@ -1,6 +1,4 @@
-# Linear-Regression
-
-### What is Linear Regression?
+## What is Linear Regression?
 
 Linear regression is a technique used to find the relationship between a dependent variable and one or more independent variables.
 
@@ -29,17 +27,17 @@ Plotted our table looks like this.
 
 We can use our simple linear equation formula to make a model for this example. Our model looks something like the following.
 
-$m = y2 - y1 / x2 - x1$
-$m= 8 - 3 / 7 - 2$
-$m= 5 / 5$
-$m= 1$
+$m = y2 - y1 / x2 - x1$ <br /> 
+$m= 8 - 3 / 7 - 2$ <br />
+$m= 5 / 5$ <br />
+$m= 1$ <br />
 
-$y = mx + b$
-$9 = (1)(8) + b$
-$9 - 8 = b$
-$1 = b$
+$y = mx + b$ <br />
+$9 = (1)(8) + b$ <br />
+$9 - 8 = b$ <br />
+$1 = b$ <br />
 
-So our model will look like $y = 1(x) + 1$
+So our model will look like $y = 1(x) + 1$ <br />
 
 ![Line of Best Fit](/images/lineOfBestFit.png)
 
@@ -50,14 +48,14 @@ As you can see in this picture this model passes through all our points making i
 In Machine Learning we model Simple Linear Regression with the following formula,
 $y=b_{0} + b_{1}X$
 
-$y$ is our dependent variable.
-$b_{0}$ is our intercept.
-$b_{1}$ is our slope.
-$X$ is our independent variable.
+$y$ is our dependent variable. <br />
+$b_{0}$ is our intercept. <br />
+$b_{1}$ is our slope. <br />
+$X$ is our independent variable. <br />
 
 ## Loss Function
 
-Often our model will not pass exactly through all our points given a more complicated data set.
+Often our dataset won't have such a simple relationship, this is where calculating loss becomes important.
 | x | y |
 | - | - |
 | 0 | 2 |
@@ -80,10 +78,10 @@ A best fit line looks something like the following.
 
 In situations like these measuring `Loss` is critical. Loss can be defined as the difference between the expected and recieved value. The purposing of training models is to reduce our loss to a minimal amount.
 
-The formula we are using Mean Squared Error(MSE) looks something like
+The formula we are using Mean Squared Error(MSE) looks like this <br />
 $\frac{1}{N}\ \sum\_{}\(output - expected)^2 $
 
-We can start by calculating MSE when our `weight` and `bias` is 0.
+We can start by calculating MSE when our weight and bias are 0.
 
 $Loss = {(2 - 0)^2 + (5 - 0)^2 + (6 - 0)^2 + (9 - 0)^2 + (11 - 0)^2 + (14 - 0)^2 + (19- 0)^2 + (20 - 0)^2 + (21 - 0)^2 + (25 - 0)^2 \over 10}$<br /> 
 <br /> 
@@ -92,7 +90,12 @@ $Loss= {(4 + 25 + 36 + 81 + 121 + 196 + 361 + 400 + 441 + 625)\over 10}$<br />
 $Loss= {(4 + 25 + 36 + 81 + 121 + 196 + 361 + 400 + 441 + 625)\over 10}$<br /> 
 $Loss= 229$<br /> 
 
-Now we want to calculate the derivative of our loss function with respect to weight. 
+
+## Gradient Descent
+
+Gradient Descent is a technique used to optimize our weight and bias values to get a minimal loss.
+
+We want to calculate the derivative of our loss function with respect to weight and bias. 
 <br />
 $Loss = {(output - expected)^2 \over N }$ <br />
 <br />
@@ -105,21 +108,19 @@ $((w * x + b)^2)\over N$ + $((expected)^2)\over N$ + $(-2 * expected * (w * x + 
 ${(w)^2 * (x)^2 + (b)^2 + 2 * w * x * b\over N} + 0 +  {-2 * expected * x\over N}$ <br />
 <br />
 ${2 * x * ( x * w + b - expected )\over N}$ <br />
-Therefore the derivative of loss with respect to w is <br>
+The derivative of loss with respect to weight is <br>
 ${1\over N} \sum\_{i=1}^N{2 * x * ( output - expected )}$ <br />
-Our derivative of loss with respect to b is <br>
+Our derivative of loss with respect to bias is <br>
 ${1\over N} \sum\_{i=1}^N{2 * ( output - expected )}$ <br />
-
 
 Using `weight=0` and `bias=0` we get a slope value of $-161$ and bias value of $-26.4$.
 
 We can slightly adjust these values to generate a new weight.
+
+Often the slight adjustment is referred to as the learning rate. In this case the learning rate is $0.01$.
 
 $New Weight = old weight + (change * weight slope)$ <br />
 $New Weight = 0 - (0.01 * -161)$ <br />
 $New Weight = 1.61$ <br />
 $New Bias = 0 - (0.01 * -26.4)$ <br />
 $New Bias = 0.264$ <br />
-## Gradient Descent
-
-Gradient Descent is a technique used to optimize our weight and bias values to get a minimal loss.
