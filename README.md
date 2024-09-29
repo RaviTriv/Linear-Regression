@@ -81,7 +81,7 @@ A best fit line looks something like the following.
 In situations like these measuring `Loss` is critical. Loss can be defined as the difference between the expected and recieved value. The purposing of training models is to reduce our loss to a minimal amount.
 
 The formula looks something like
-$1/N sum_{} = (expected - output)^2 $
+$\frac{1}{N}\ \sum_{}\(expected - output)^2 $
 
 $y=b_{0} + b_{1}X$
 
