@@ -81,7 +81,9 @@ A best fit line looks something like the following.
 In situations like these measuring `Loss` is critical. Loss can be defined as the difference between the expected and recieved value. The purposing of training models is to reduce our loss to a minimal amount.
 
 The formula we are using Mean Squared Error(MSE) looks something like
-$\frac{1}{N}\ \sum\_{}\(expected - output)^2 $
+$\frac{1}{N}\ \sum\_{}\(output - expected)^2 $
+
+We can start by calculating MSE when our `weight` and `bias` is 0.
 
 $Loss = {(2 - 0)^2 + (5 - 0)^2 + (6 - 0)^2 + (9 - 0)^2 + (11 - 0)^2 + (14 - 0)^2 + (19- 0)^2 + (20 - 0)^2 + (21 - 0)^2 + (25 - 0)^2 \over 10}$<br /> 
 <br /> 
@@ -89,6 +91,18 @@ $Loss= {(4 + 25 + 36 + 81 + 121 + 196 + 361 + 400 + 441 + 625)\over 10}$<br />
 <br /> 
 $Loss= {(4 + 25 + 36 + 81 + 121 + 196 + 361 + 400 + 441 + 625)\over 10}$<br /> 
 $Loss= 229$<br /> 
+
+Now we want to calculate the derivative of our loss function with respect to weight. <br />
+$Loss = {(output - expected)^2 \over N }$
+<br />
+$Loss = {(output)^2 - (expected)^2 - 2*output*expected \over N }$
+<br />
+$Loss = {(output^2 - expected^2 - 2*output*expected) \over N }$
+<br />
+$Loss = {((w * x + b)^2 - expected^2 - 2*(w * x + b)*expected) \over N }$
+<br />
+$Loss = {(w * x + b)^2\over N  + expected^2\over N + -2*(w * x + b)*expected\over N }$
+
 
 $y=b_{0} + b_{1}X$<br /> 
 $y=2.1 + b_{1}X$<br /> 
