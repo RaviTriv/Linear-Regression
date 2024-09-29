@@ -33,8 +33,12 @@ void gradientDescent()
   }
   weightRes = weightRes / (float)10;
   biasRes = biasRes / (float)10;
+  printf("WEIGHT RES: %f\n", weightRes);
+  printf("BIAS RES: %f\n", biasRes);
   weight = weight - (change * weightRes);
   bias = bias - (change * biasRes);
+  printf("WEIGHT: %f\n", weight);
+  printf("BIAS: %f\n", bias);
 }
 
 void calcOutput()
@@ -53,8 +57,8 @@ int main()
     gradientDescent();
     calcOutput();
   }
-  printf("WEIGHT: %f\n", weight);
-  printf("BIAS: %f\n", bias);
+  printf("FINAL WEIGHT: %f\n", weight);
+  printf("FINAL BIAS: %f\n", bias);
 
   return 0;
 }

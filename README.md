@@ -111,14 +111,14 @@ Our derivative of loss with respect to b is <br>
 ${1\over N} \sum\_{i=1}^N{2 * ( output - expected )}$ <br />
 
 
-Using `weight=0` and `bias=0` we get a slope value of $161$ and bias value of $26.4$.
+Using `weight=0` and `bias=0` we get a slope value of $-161$ and bias value of $-26.4$.
 
 We can slightly adjust these values to generate a new weight.
 
 $New Weight = old weight + (change * weight slope)$ <br />
-$New Weight = 0 + (0.01 * 161)$ <br />
+$New Weight = 0 - (0.01 * -161)$ <br />
 $New Weight = 1.61$ <br />
-$New Bias = 0 + (0.01 * 26.4)$ <br />
+$New Bias = 0 - (0.01 * -26.4)$ <br />
 $New Bias = 0.264$ <br />
 ## Gradient Descent
 
