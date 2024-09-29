@@ -106,9 +106,9 @@ ${(w)^2 * (x)^2 + (b)^2 + 2 * w * x * b\over N} + 0 +  {-2 * expected * x\over N
 <br />
 ${2 * x * ( x * w + b - expected )\over N}$ <br />
 Therefore the derivative of loss with respect to w is <br>
-${2 * x * ( output - expected )\over N}$ <br />
+${1\over N} \sum\_{i=1}^N{2 * x * ( output - expected )}$ <br />
 Our derivative of loss with respect to b is <br>
-${2 * ( output - expected )\over N}$ <br />
+${1\over N} \sum\_{i=1}^N{2 * ( output - expected )}$ <br />
 
 
 
