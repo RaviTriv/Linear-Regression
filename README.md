@@ -83,11 +83,11 @@ In situations like these measuring `Loss` is critical. Loss can be defined as th
 The formula we are using Mean Squared Error(MSE) looks something like
 $\frac{1}{N}\ \sum\_{}\(expected - output)^2 $
 
-$Loss = {(2 - 0)^2 + (5 - 0)^2 + (6 - 0)^2 + (9 - 0)^2 + (11 - 0)^2 + (14 - 0)^2 + (19- 0)^2 + (20 - 0)^2 + (21 - 0)^2 + (25 - 0)^2 \over 10}$
+$Loss = {(2 - 0)^2 + (5 - 0)^2 + (6 - 0)^2 + (9 - 0)^2 + (11 - 0)^2 + (14 - 0)^2 + (19- 0)^2 + (20 - 0)^2 + (21 - 0)^2 + (25 - 0)^2 \over 10}$<br /> 
 $Loss=$
 
-$y=b_{0} + b_{1}X$
-$y=2.1 + b_{1}X$
+$y=b_{0} + b_{1}X$<br /> 
+$y=2.1 + b_{1}X$<br /> 
 $y=2.1 + 2.5X$
 
 | x   | recieved y | expected y |
