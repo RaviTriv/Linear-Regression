@@ -80,5 +80,24 @@ A best fit line looks something like the following.
 
 In situations like these measuring `Loss` is critical. Loss can be defined as the difference between the expected and recieved value. The purposing of training models is to reduce our loss to a minimal amount.
 
+The formula looks something like
+$1/N sum_{} = (expected - output)^2 $
+
+$y=b_{0} + b_{1}X$
+
+$y=2.1 + b_{1}X$
+$y=2.1 + 2.5X$
+
+Our formula returns the following values when `x=5` we get `y=14.6`. Our expected value is `y=14`.
+
+$L=(14.6 - 14)^2$
+$L=0.36$
+
+Plugging these numbers into our loss function we see our loss is $0.36$
+
+
+## Gradient Descent 
+Gradient Descent is a technique used to optimize our weight and bias values to get a minimal loss.
+
 
 
