@@ -111,29 +111,15 @@ Our derivative of loss with respect to b is <br>
 ${1\over N} \sum\_{i=1}^N{2 * ( output - expected )}$ <br />
 
 
-Using `weight=0` and `bias=0` we get a slope value of $161$.
+Using `weight=0` and `bias=0` we get a slope value of $161$ and bias value of $26.4$.
 
-$y=b_{0} + b_{1}X$<br /> 
-$y=2.1 + b_{1}X$<br /> 
-$y=2.1 + 2.5X$
+We can slightly adjust these values to generate a new weight.
 
-| x   | recieved y | expected y |
-| --- | ---------- | ---------- |
-| 0   | 2.1        | 2          |
-| 1   | 4.6        | 5          |
-| 2   | 7.1        | 6          |
-| 3   | 9.6        | 9          |
-| 4   | 12.1       | 11         |
-| 5   | 14.6       | 14         |
-| 6   | 17.1       | 19         |
-| 7   | 19.6       | 20         |
-| 8   | 22.4       | 21         |
-| 9   | 24.6       | 25         |
-
-$\frac{1}{N}\ \sum\_{}\(expected - output)^2 $
-
-Plugging these numbers in we see our MSE is $0.36$
-
+$New Weight = old weight + (change * weight slope)$
+$New Weight = 0 + (0.01 * 161)$
+$New Weight = 1.61$
+$New Bias = 0 + (0.01 * 26.4)$
+$New Bias = 0.264$
 ## Gradient Descent
 
 Gradient Descent is a technique used to optimize our weight and bias values to get a minimal loss.
