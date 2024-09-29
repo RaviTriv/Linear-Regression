@@ -4,7 +4,7 @@ double dataset[10][2] = {{0, 2}, {1, 5}, {2, 6}, {3, 9}, {4, 11}, {5, 14}, {6, 1
 double output[10][2] = {{0, 0}, {1, 0}, {2, 0}, {3, 0}, {4, 0}, {5, 0}, {6, 0}, {7, 0}, {8, 0}, {9, 0}};
 double weight = 0;
 double bias = 0;
-int EPOCH = 100;
+int EPOCH = 10000;
 int arrSize = sizeof(dataset) / sizeof(dataset[0]);
 
 // Calculate Error
@@ -50,6 +50,10 @@ void calcOutput()
   }
 }
 
+double estimate(int x){
+  return weight * (float)x + bias;
+}
+
 int main()
 {
 
@@ -63,5 +67,6 @@ int main()
   printf("FINAL WEIGHT: %f\n", weight);
   printf("FINAL BIAS: %f\n", bias);
 
+  printf("PREDICTION: %f\n", estimate(5));
   return 0;
 }
