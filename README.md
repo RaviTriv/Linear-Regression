@@ -113,14 +113,19 @@ ${1\over N} \sum\_{i=1}^N{2 * x * ( output - expected )}$ <br />
 Our derivative of loss with respect to bias is <br>
 ${1\over N} \sum\_{i=1}^N{2 * ( output - expected )}$ <br />
 
-Using `weight=0` and `bias=0` we get a slope value of $-161$ and bias value of $-26.4$.
+Using $weight=0$ and $bias=0$ we get a slope value of $-161$ and bias value of $-26.4$.
 
 We can slightly adjust these values to generate a new weight.
 
 Often the slight adjustment is referred to as the learning rate. In this case the learning rate is $0.01$.
 
-$New Weight = old weight + (change * weight slope)$ <br />
+$New Weight = oldWeight + (change * weightSlope)$ <br />
 $New Weight = 0 - (0.01 * -161)$ <br />
 $New Weight = 1.61$ <br />
 $New Bias = 0 - (0.01 * -26.4)$ <br />
 $New Bias = 0.264$ <br />
+
+## Training the Model
+Once we calculate loss, apply gradient descent we then update our output values with the new weight and bias. We repeat this process a number of times. This number is known as EPOCH. In this case our EPOCH value is $10000$.
+
+Once our model is trained and we have optimal weight and bias we can attempt to calculate the output.
